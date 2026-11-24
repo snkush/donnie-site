@@ -226,6 +226,7 @@ footer a:hover{color:var(--red)}
 /* Clips : écrans 16:9 en carrousel, YouTube chargé seulement au clic (rapide, sans pistage avant lecture) */
 .clips{display:grid;grid-auto-flow:column;grid-auto-columns:86%;gap:12px;list-style:none;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:4px 16px 14px;scroll-padding:0 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .clips::-webkit-scrollbar{display:none}
+.clips.solo{grid-auto-columns:100%}
 .clips li{scroll-snap-align:start;min-width:0}
 .clip{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;border-radius:14px;overflow:hidden;background:#000;cursor:pointer;box-shadow:0 18px 36px -16px rgba(0,0,0,.9);isolation:isolate}
 .clip img,.clip iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
@@ -288,8 +289,13 @@ footer a:hover{color:var(--red)}
     </div>
   </section>
 
+  <h2 id="clips">Le clip</h2>
+  <ul class="clips solo" aria-label="Clips de Don Donnie Do">
+    <li><button class="clip" type="button" data-v="4MNNeY6P9RE" data-k="clip-streamer-tous-mes-sons" aria-label="Lire le clip Streamer tous mes sons"><img src="https://i.ytimg.com/vi/4MNNeY6P9RE/maxresdefault.jpg" alt="" loading="lazy" decoding="async" width="1280" height="720"><i><svg aria-hidden="true"><use href="#play"/></svg></i></button><p><span>Streamer tous mes sons</span><a href="/streamer-tous-mes-sons" data-k="clip-ecouter-streamer-tous-mes-sons">Écouter</a></p></li>
+  </ul>
+
   <nav class="listen" aria-label="Autres façons d'écouter">
-    <a class="pf yt" data-k="youtube-clip" href="https://www.youtube.com/watch?v=4MNNeY6P9RE" target="_blank" rel="noopener"><span class="ic"><svg aria-hidden="true"><use href="#yt"/></svg></span><span class="lb">YouTube<em>Le clip</em></span><svg class="ar" aria-hidden="true"><use href="#ar"/></svg></a>
+    
     <a class="pf" data-k="page-sortie" href="/streamer-tous-mes-sons"><span class="ic"><svg aria-hidden="true"><use href="#play"/></svg></span><span class="lb">Page du son<em>Toutes les plateformes</em></span><svg class="ar" aria-hidden="true"><use href="#ar"/></svg></a>
   </nav>
 
@@ -372,5 +378,6 @@ var GC='';
     .catch(function(){b.disabled=false;alert("Erreur d'envoi, réessaie ou écris à lelabelsnk@gmail.com")})})});
 })();
 </script>
+<script>document.querySelectorAll('.clip').forEach(function(b){b.addEventListener('click',function(){if(b.classList.contains('on'))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.v+'?autoplay=1&playsinline=1&rel=0';f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;b.classList.add('on');b.appendChild(f);});});</script>
 </body>
 </html>
