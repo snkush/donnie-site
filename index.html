@@ -31,7 +31,7 @@
 </script>
 <script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "MusicGroup", "name": "Don Donnie Do", "url": "https://snk-records.com/donnie", "image": "https://snk-records.com/photos/covers/streamer-tous-mes-sons.jpg", "genre": ["Rap"], "description": "Près de dix ans de musique, et un premier projet officiel, « Premier Contact » (2026), qui pose les premières fondations. Une intelligence créative en coulisses : direction artistique, toplines, collaboration en studio.", "foundingLocation": {"@type": "Place", "name": "Marseille"}, "recordLabel": {"@type": "Organization", "name": "SNK Records", "url": "https://snk-records.com"}, "track": [{"@type": "MusicRecording", "name": "Streamer tous mes sons", "url": "https://snk-records.com/donnie/streamer-tous-mes-sons"}, {"@type": "MusicRecording", "name": "Premier contact (projet)", "url": "https://snk-records.com/donnie/premier-contact"}, {"@type": "MusicRecording", "name": "Anglais", "url": "https://snk-records.com/donnie/anglais"}, {"@type": "MusicRecording", "name": "Amertume", "url": "https://snk-records.com/donnie/amertume"}, {"@type": "MusicRecording", "name": "Exo-City", "url": "https://snk-records.com/donnie/exo-city"}], "sameAs": ["https://open.spotify.com/artist/6EGsqLEPDLda8dYjBRLpxk", "https://music.apple.com/fr/artist/don-donnie-do/1865743230", "https://instagram.com/donnie.snk"]}
+{"@context": "https://schema.org", "@type": "MusicGroup", "name": "Don Donnie Do", "url": "https://snk-records.com/donnie", "image": "https://snk-records.com/photos/covers/streamer-tous-mes-sons.jpg", "genre": ["Rap"], "description": "Près de dix ans de musique, et un premier projet officiel, « Premier Contact » (2026), qui pose les premières fondations. Une intelligence créative en coulisses : direction artistique, toplines, collaboration en studio. Chez SNK Records.", "foundingLocation": {"@type": "Place", "name": "Marseille"}, "recordLabel": {"@type": "Organization", "name": "SNK Records", "url": "https://snk-records.com"}, "track": [{"@type": "MusicRecording", "name": "Streamer tous mes sons", "url": "https://snk-records.com/donnie/streamer-tous-mes-sons"}, {"@type": "MusicRecording", "name": "Premier contact (projet)", "url": "https://snk-records.com/donnie/premier-contact"}, {"@type": "MusicRecording", "name": "Anglais", "url": "https://snk-records.com/donnie/anglais"}, {"@type": "MusicRecording", "name": "Amertume", "url": "https://snk-records.com/donnie/amertume"}, {"@type": "MusicRecording", "name": "Exo-City", "url": "https://snk-records.com/donnie/exo-city"}], "sameAs": ["https://open.spotify.com/artist/6EGsqLEPDLda8dYjBRLpxk", "https://music.apple.com/fr/artist/don-donnie-do/1865743230", "https://instagram.com/donnie.snk"]}
 </script>
 <style>
 /* --tint : couleur tirée de la pochette du dernier projet (calculée au chargement), elle teinte toute la page */
@@ -239,6 +239,9 @@ footer a:hover{color:var(--red)}
 .clip.on i{display:none}
 .clips p{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .clips p a{color:var(--muted);flex:none}.clips p a:hover{color:var(--red)}
+/* Logo SNK posé contre le nom, comme une signature du label */
+.hero .id h1 .nm{white-space:nowrap}
+.hero .id h1 .sig{position:static;inset:auto;animation:none;transform:none;opacity:1;object-fit:contain;display:inline-block;vertical-align:top;height:.3em;width:auto;margin:.03em 0 0 .06em;filter:drop-shadow(0 4px 14px rgba(0,0,0,.5))}
 .subs{display:flex;align-items:center;gap:12px;margin-top:6px;padding:12px 12px 12px 16px;border-radius:16px;background:linear-gradient(120deg,rgba(214,0,43,.22),var(--card) 70%);border:1px solid rgba(214,0,43,.45);transition:border-color .2s,transform .25s var(--ease)}
 .subs svg{width:28px;height:28px;flex:none;color:#ff0033}
 .subs span{flex:1;min-width:0;font-size:12px;line-height:1.4;color:rgba(237,233,225,.84)}.subs strong{display:block;font-weight:500;font-size:14px;color:var(--paper)}
@@ -274,7 +277,7 @@ footer a:hover{color:var(--red)}
     <a class="tag" href="https://snk-records.com/sorties" data-k="label-sorties">Le label</a>
   </div>
   <div class="id">
-    <h1>Don Donnie Do</h1>
+    <h1>Don Donnie <span class="nm">Do<img class="sig" src="/photos/snk-logo.svg" alt="" aria-hidden="true" width="356" height="200"></span></h1>
     <p class="role">Artiste<b>·</b>Rap<b>·</b>Marseille</p>
   </div>
 </header>
@@ -299,7 +302,7 @@ footer a:hover{color:var(--red)}
     <a class="pf" data-k="page-sortie" href="/streamer-tous-mes-sons"><span class="ic"><svg aria-hidden="true"><use href="#play"/></svg></span><span class="lb">Page du son<em>Toutes les plateformes</em></span><svg class="ar" aria-hidden="true"><use href="#ar"/></svg></a>
   </nav>
 
-  <p class="bio">Près de dix ans de musique, et un premier projet officiel, « Premier Contact » (2026), qui pose les premières fondations. Une intelligence créative en coulisses : direction artistique, toplines, collaboration en studio.</p>
+  <p class="bio">Près de dix ans de musique, et un premier projet officiel, « Premier Contact » (2026), qui pose les premières fondations. Une intelligence créative en coulisses : direction artistique, toplines, collaboration en studio. Chez SNK Records.</p>
 
   <h2>Suivre Don Donnie Do</h2>
   <nav class="follow" aria-label="Réseaux sociaux">
